@@ -14,6 +14,7 @@ $slider-fill-background: $primary-color;
   &.is-dragging {
     box-shadow: 0 0 0 6px $primary-color;
   }
+
   &:hover {
     background-color: $primary-color;
   }
