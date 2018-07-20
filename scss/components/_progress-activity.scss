@@ -3,6 +3,6 @@
 
 $progress-radius: 0;
 $progress-height: 4px;
-$progress-background: rgba($progress-meter-background,.25);
+$progress-background: rgba($progress-meter-background, .25);
 
 @include foundation-progress-bar;
