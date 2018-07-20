@@ -9,27 +9,32 @@
   padding: .5rem 0;
   overflow: hidden;
   width: auto;
+  transition: opacity .4s ease-in-out, max-height .4s ease-in-out;
+
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
+
   li a {
     padding: .75rem 1.5rem;
     font-size: rem-calc(13);
     color: $black-87;
     display: block;
+
     &:hover {
       background: $grey-200;
     }
   }
-  transition: opacity .4s ease-in-out, max-height .4s ease-in-out;
-}
-.dropdown-pane[aria-hidden="true"] {
-  max-height: 0;
-  opacity: 0;
-}
-.dropdown-pane[aria-hidden="false"] {
-  max-height: 200px;
-  opacity: 1;
+  
+  &[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  &[aria-hidden="false"] {
+    max-height: 200px;
+    opacity: 1;
+  }
 }
