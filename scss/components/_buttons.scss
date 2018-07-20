@@ -7,13 +7,16 @@
   padding: $button-padding;
   position: relative;
   border: 0;
+
   &:not(.floating-action) {
     @extend .z-depth-1;
+
     &:active {
       @extend .z-depth-2;
     }
   }
 }
+
 .floating-action.button {
   overflow: hidden;
   width: 56px;
@@ -21,36 +24,43 @@
   border-radius: 50%;
   padding: 1rem;
   margin: 0;
+  @extend .z-depth-2;
+
   i {
     font-size: 24px;
     text-align: center;
   }
-  @extend .z-depth-2;
+
   &:active {
     @extend .z-depth-3;
   }
 }
+
 .hollow.button {
   background: $white;
   border: 0 !important;
+
   &:hover {
     background: $grey-100;
   }
 }
+
 .flat.button {
-  &,&:active {
+  &, &:active {
     box-shadow: none;
   }
+
   @each $name, $color in $button-palette {
     &.#{$name} {
       @include button-style(
-        $background: rgba($color,0),
-        $background-hover: rgba($color,.2),
+        $background: rgba($color, 0),
+        $background-hover: rgba($color, .2),
         $color: $color
       );
     }
   }
 }
+
 .disabled.button {
   @include button($background: transparent, $background-hover: transparent, $color: $black);
   box-shadow: none;
